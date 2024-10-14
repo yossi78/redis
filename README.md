@@ -4,7 +4,7 @@ HOW TO RUN DOCKER IMAGE OF REDIS
 ------------------------------------------------------------------------------------------
 Open command line under the root of the project and run as follow:
 docker-compose up -d
-
+stop the container of redis service and run service from intellij
 
 
 
