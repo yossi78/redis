@@ -4,7 +4,6 @@ import com.example.redis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
 
@@ -15,10 +14,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // Create User
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        // Generate a unique ID if not provided
         if (user.getId() == null || user.getId().isEmpty()) {
             user.setId(java.util.UUID.randomUUID().toString());
         }
