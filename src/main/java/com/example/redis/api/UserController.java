@@ -26,7 +26,6 @@ public class UserController {
         return ResponseEntity.ok(savedUser);
     }
 
-    // Get User by ID
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable String id) {
         Optional<User> userOpt = userService.getUserById(id);
@@ -34,7 +33,6 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Update User
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody User user) {
         Optional<User> existingUserOpt = userService.getUserById(id);
@@ -52,7 +50,6 @@ public class UserController {
         }
     }
 
-    // Delete User
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable String id) {
         Optional<User> userOpt = userService.getUserById(id);
@@ -64,7 +61,6 @@ public class UserController {
         }
     }
 
-    // Get All Users
     @GetMapping
     public ResponseEntity<Iterable<User>> getAllUsers() {
         Iterable<User> users = userService.getAllUsers();
