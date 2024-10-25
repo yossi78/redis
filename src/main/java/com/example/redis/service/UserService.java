@@ -51,8 +51,9 @@ public class UserService {
 
 
     public User updateUser(String userId, User updatedUser) {
-        checkUserExistance(userId);
+        User user  = checkUserExistance(userId);
         updatedUser.setId(userId);
+        updatedUser.setCreationTime(user.getCreationTime());
         return userRepository.save(updatedUser);
     }
 

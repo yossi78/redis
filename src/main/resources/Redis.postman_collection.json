@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2f90d117-6ebc-48df-8616-597ab0e18b47",
+		"_postman_id": "1cb402a5-d7e3-4792-90cd-8e72202b607d",
 		"name": "Redis",
 		"description": "Collection of CRUD APIs for the User Service.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -20,7 +20,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"age\": 30,\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"salary\": 75000\n}"
+					"raw": "{\n    \"age\": 30,\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"salary\": 10000\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/users",
@@ -50,7 +50,37 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"age\": 46,\n    \"firstName\": \"Yossi\",\n    \"lastName\": \"Tal\",\n    \"salary\": 99000\n}"
+					"raw": "{\n    \"age\": 46,\n    \"firstName\": \"Yossi\",\n    \"lastName\": \"Tal\",\n    \"salary\": 20000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User - 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"age\": 50,\n    \"firstName\": \"Ayala\",\n    \"lastName\": \"Gad\",\n    \"salary\": 30000\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/users",
@@ -93,7 +123,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/users/:id",
+					"raw": "http://localhost:8080/api/users/bd3a225f-f8b8-4cec-b9d6-e5366f77f493",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,13 +132,7 @@
 					"path": [
 						"api",
 						"users",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "USER_ID"
-						}
+						"bd3a225f-f8b8-4cec-b9d6-e5366f77f493"
 					]
 				}
 			},
@@ -127,10 +151,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"age\": 31,\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"salary\": 80000\n}"
+					"raw": "{\n    \"age\": 88,\n    \"firstName\": \"Yossi88\",\n    \"lastName\": \"Tal88\",\n    \"salary\": 88888\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/users/:id",
+					"raw": "http://localhost:8080/api/users/bd3a225f-f8b8-4cec-b9d6-e5366f77f493",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -139,13 +163,7 @@
 					"path": [
 						"api",
 						"users",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "USER_ID"
-						}
+						"bd3a225f-f8b8-4cec-b9d6-e5366f77f493"
 					]
 				}
 			},
@@ -157,7 +175,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/users/e15b59a9-1238-4fa0-b86d-b2d38bd2ab3c",
+					"raw": "http://localhost:8080/api/users/886a86f6-283f-4688-a1da-ae3b249fe77c",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -166,7 +184,7 @@
 					"path": [
 						"api",
 						"users",
-						"e15b59a9-1238-4fa0-b86d-b2d38bd2ab3c"
+						"886a86f6-283f-4688-a1da-ae3b249fe77c"
 					]
 				}
 			},
