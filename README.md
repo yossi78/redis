@@ -15,3 +15,13 @@ HOW TO RUN REDIS COMMAND (UI via browser)
 ------------------------------------------------------------------------------------------
 Navigate to http://localhost:8081
 
+
+
+
+OPEN UI IN BROWSER
+-------------------------------------------------------------------------------------------------------------
+#) Open the browser in the following url:
+http://localhost:8080/
+
+
+
